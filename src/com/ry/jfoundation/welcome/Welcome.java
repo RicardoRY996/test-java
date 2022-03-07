@@ -1,4 +1,4 @@
-package com.ry.jfoundation;
+package com.ry.jfoundation.welcome;
 
 public class Welcome {
     public static void main(String[] args) {

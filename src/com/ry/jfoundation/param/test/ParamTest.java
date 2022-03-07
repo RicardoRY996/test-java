@@ -1,4 +1,4 @@
-package com.ry.jfoundation;
+package com.ry.jfoundation.param.test;
 
 public class ParamTest {
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class ParamTest {
         Mothods can change the state of object parameters
          */
         System.out.println("\nTesting tripleSalary:");
-        var harry = new Employee2("Harry", 50000);
+        var harry = new EmployeeInParamTest("Harry", 50000);
         System.out.println("Before: salary=" + harry.getSalary());
         tripleSalary(harry);
         System.out.println("After: salary=" + harry.getSalary());
@@ -25,8 +25,8 @@ public class ParamTest {
          */
 
         System.out.println("\nTesting swap:");
-        Employee2 a = new Employee2("Alice", 70000);
-        Employee2 b = new Employee2("Bob",60000);
+        EmployeeInParamTest a = new EmployeeInParamTest("Alice", 70000);
+        EmployeeInParamTest b = new EmployeeInParamTest("Bob",60000);
         System.out.println("Before: a="+a.getName());
         System.out.println("Before: b="+b.getName());
         swap(a,b);
@@ -36,13 +36,13 @@ public class ParamTest {
 
     }
 
-    private static void tripleSalary(Employee2 x) {
+    private static void tripleSalary(EmployeeInParamTest x) {
         x.raiseSalary(200);
         System.out.println("End of method: salary="+x.getSalary());
     }
 
-    private static void swap(Employee2 x, Employee2 y) {
-        Employee2 temp = x;
+    private static void swap(EmployeeInParamTest x, EmployeeInParamTest y) {
+        EmployeeInParamTest temp = x;
         x = y;
         y = temp;
         System.out.println("End of method: x = " + x.getName());
@@ -54,11 +54,11 @@ public class ParamTest {
         System.out.println("End of method: x=" + x);
     }
 }
-class Employee2{//simplified Employee class
+class EmployeeInParamTest {//simplified Employee class
     private String name;
     private double salary;
 
-    public Employee2(String n,double s){
+    public EmployeeInParamTest(String n, double s){
         this.name = n;
         this.salary = s;
     }

@@ -1,22 +1,22 @@
-package com.ry.jfoundation;
+package com.ry.jfoundation.statictest;
 
 public class StaticTest {
     public static void main(String[] args) {
         //fill the staff array with three Employee objects
-        var staff = new Employee[3];
+        var staff = new EmployeeInStaticTest[3];
 
-        staff[0] = new Employee("Tom", 40000);
-        staff[1] = new Employee("Dick", 60000);
-        staff[2] = new Employee("Harry", 65000);
+        staff[0] = new EmployeeInStaticTest("Tom", 40000);
+        staff[1] = new EmployeeInStaticTest("Dick", 60000);
+        staff[2] = new EmployeeInStaticTest("Harry", 65000);
 
         //print information
-        for (Employee e : staff){
+        for (EmployeeInStaticTest e : staff){
             e.setId();
             System.out.println("name = " + e.getName() + "salary = " + e.getSalary() +"id = " + e.getId());
         }
     }
 }
-class Employee{
+class EmployeeInStaticTest {
     private static int nextId = 1;
 
     private String name;
@@ -27,7 +27,7 @@ class Employee{
     public static int getNextId() {
         return nextId;
     }
-    public Employee(String n, double s) {
+    public EmployeeInStaticTest(String n, double s) {
         name = n;
         salary = s;
         id = 0;
@@ -51,7 +51,7 @@ class Employee{
     }
 
     public static void main(String[] args) {
-        var e = new Employee("Harry",50000);
+        var e = new EmployeeInStaticTest("Harry",50000);
         System.out.println(e.getName() + " " + e.getSalary());
     }
 }

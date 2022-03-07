@@ -1,4 +1,4 @@
-package com.ry.jfoundation;
+package com.ry.jfoundation.input.test;
 
 import java.util.Scanner;
 

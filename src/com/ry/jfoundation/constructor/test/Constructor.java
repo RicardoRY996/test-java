@@ -1,23 +1,23 @@
-package com.ry.jfoundation;
+package com.ry.jfoundation.constructor.test;
 
 import java.util.Random;
 
 public class Constructor {
     public static void main(String[] args) {
         //fill the staff array with three Employee objects
-        var staff = new Employee3[3];
-        staff[0] = new Employee3("Harry",40000);
-        staff[1] = new Employee3(60000);
-        staff[2] = new Employee3();
+        var staff = new EmployeeInConstructorTest[3];
+        staff[0] = new EmployeeInConstructorTest("Harry",40000);
+        staff[1] = new EmployeeInConstructorTest(60000);
+        staff[2] = new EmployeeInConstructorTest();
 
         //print out
-        for ( Employee3 e : staff){
+        for ( EmployeeInConstructorTest e : staff){
             System.out.println("name = "+e.getName()+" salary = "+e.getSalary()+" id = "+ e.getId());
         }
     }
 }
 
-class Employee3{
+class EmployeeInConstructorTest {
     private static int nextId;
 
     private int id;
@@ -37,16 +37,16 @@ class Employee3{
     }
 
     //three overloaded constructors
-    public Employee3(String n,double s){
+    public EmployeeInConstructorTest(String n, double s){
         name = n;
         salary = s;
     }
-    public Employee3(double s){
+    public EmployeeInConstructorTest(double s){
         //calls the Employee(String, double) constructor
         this("Employee #"+nextId,s);
     }
     //the default constructor
-    public Employee3(){
+    public EmployeeInConstructorTest(){
         //name initialized to ""--see above
         //salary not explicitly set--initialized to 0
         //id initialized in initialization block

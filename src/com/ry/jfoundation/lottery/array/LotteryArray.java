@@ -1,4 +1,4 @@
-package com.ry.jfoundation;
+package com.ry.jfoundation.lottery.array;
 
 public class LotteryArray {
     public static void main(String[] args) {

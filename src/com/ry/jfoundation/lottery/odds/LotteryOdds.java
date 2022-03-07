@@ -1,9 +1,8 @@
-package com.ry.jfoundation;
+package com.ry.jfoundation.lottery.odds;
 
-import java.math.BigInteger;
 import java.util.Scanner;
 
-public class BigIntegerTest {
+public class LotteryOdds {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
@@ -14,16 +13,11 @@ public class BigIntegerTest {
         int n = in.nextInt();
 
         /*
-        compute binomial coefficient n*(n-1)*(n-2)...(1*2*3...*k)
+        compute binomial coefficient n*(n-1)*(n-2)*...*(n-k+1)/(1*2*3...*k)
          */
-        BigInteger lotteryOdds = BigInteger.valueOf(1);
-
+        int lotteryOdds = 1;
         for (int i = 1; i <= k; i++)
-            lotteryOdds = lotteryOdds.multiply(BigInteger.valueOf(n - 1 + 1)).divide(
-                    BigInteger.valueOf(i)
-            );
-
+            lotteryOdds = lotteryOdds * (n - i + 1) / i;
         System.out.println("Your odds are 1 in " + lotteryOdds + ". Good luck!");
-
     }
 }

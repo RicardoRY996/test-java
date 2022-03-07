@@ -1,4 +1,4 @@
-package com.ry.jfoundation;
+package com.ry.jfoundation.lottery.drawing;
 
 import java.util.Arrays;
 import java.util.Scanner;

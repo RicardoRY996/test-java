@@ -1,4 +1,4 @@
-package com.ry.jfoundation;
+package com.ry.jfoundation.retirement;
 
 import java.util.Scanner;
 

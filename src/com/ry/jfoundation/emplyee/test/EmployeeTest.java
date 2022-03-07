@@ -1,32 +1,32 @@
-package com.ry.jfoundation;
+package com.ry.jfoundation.emplyee.test;
 
 import java.time.LocalDate;
 
 public class EmployeeTest {
     public static void main(String[] args) {
         //fill the staff array with three Employee objects
-        Employee1[] staff = new Employee1[3];
+        EmployeeInEmployeeTest[] staff = new EmployeeInEmployeeTest[3];
 
-        staff[0] = new Employee1("Ry", 75000, 1987, 12, 15);
-        staff[1] = new Employee1("ll", 50000, 1989, 10, 1);
-        staff[2] = new Employee1("hh", 40000, 1990, 3, 15);
+        staff[0] = new EmployeeInEmployeeTest("Ry", 75000, 1987, 12, 15);
+        staff[1] = new EmployeeInEmployeeTest("ll", 50000, 1989, 10, 1);
+        staff[2] = new EmployeeInEmployeeTest("hh", 40000, 1990, 3, 15);
 
         //raise everyone's salary by 5%
-        for (Employee1 e : staff)
+        for (EmployeeInEmployeeTest e : staff)
             e.raiseSalary(5);
 
         //print out about all object
-        for (Employee1 e : staff)
+        for (EmployeeInEmployeeTest e : staff)
             System.out.println("name=" + e.getName() + " salary=" + e.getSalary() + " hireDay=" + e.getHireDay());
 //            e.toString();
     }
 }
-class Employee1 {
+class EmployeeInEmployeeTest {
         private String name;
         private double salary;
         private LocalDate hireDay;
 
-        public Employee1(String name, double salary, int year, int month, int day){
+        public EmployeeInEmployeeTest(String name, double salary, int year, int month, int day){
             this.name = name;
             this.salary = salary;
             this.hireDay = LocalDate.of(year,month,day);

@@ -1,4 +1,4 @@
-package com.ry.jfoundation;
+package com.ry.jfoundation.compound.interest;
 
 public class CompoundInterest {
     public static void main(String[] args) {

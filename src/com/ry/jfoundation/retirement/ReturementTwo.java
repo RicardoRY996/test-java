@@ -1,8 +1,8 @@
-package com.ry.jfoundation;
+package com.ry.jfoundation.retirement;
 
 import java.util.Scanner;
 
-public class Returement2 {
+public class ReturementTwo {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 

@@ -1,4 +1,4 @@
-package com.ry.jfoundation;
+package com.ry.jfoundation.calendar.test;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
