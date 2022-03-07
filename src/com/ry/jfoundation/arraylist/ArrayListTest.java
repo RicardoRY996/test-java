@@ -1,4 +1,6 @@
-package com.ry.jfoundation.equals;
+package com.ry.jfoundation.arraylist;
+
+import com.ry.jfoundation.equals.EmployeeInEqualsTest;
 
 import java.util.ArrayList;
 
