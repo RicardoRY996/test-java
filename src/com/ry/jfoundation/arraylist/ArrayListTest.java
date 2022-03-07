@@ -21,6 +21,7 @@ public class ArrayListTest {
         //print out information about all Employee objects
         for (EmployeeInEqualsTest e : staff){
             System.out.println("name=" + e.getName() + ",salary=" + e.getSalary() + ",hireDay=" + e.getHireDay());
+
         }
     }
 }
