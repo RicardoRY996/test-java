@@ -11,7 +11,7 @@ public class EqualsTest {
 
         System.out.println("alice1 == alice3 : " + (alice1 == alice3));
 
-        System.out.println("alice.equals(alice3) : " + (alice1));
+        System.out.println("alice1.equals(alice3) : " + (alice1.equals(alice3)));
 
         System.out.println("alice1.equals(bob) : " + alice1.equals(bob));
 
