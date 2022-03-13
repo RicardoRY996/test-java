@@ -34,4 +34,7 @@ public class ManagerInEqualsTest extends EmployeeInEqualsTest{
         return super.toString() + "[bonus=" + bonus + "]";
     }
 
+    public double getBonus() {
+        return bonus;
+    }
 }
