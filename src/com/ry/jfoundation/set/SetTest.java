@@ -17,6 +17,7 @@ public class SetTest {
                 words.add(word);
                 callTime = System.currentTimeMillis() - callTime;
                 totalTime += callTime;
+
             }
         }
 
