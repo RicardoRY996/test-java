@@ -19,16 +19,15 @@ public class Array {
 
     //插入方法
     public void insert(int item){
-        //if the array is full, resize it
         if (items.length == count){
             int[] newItems = new int[count * 2];
 
             for (int i = 0; i < count; i++){
                 newItems[i] = items[i];
             }
+
             items = newItems;
         }
-        //add the new item at the end
         items[count] = item;
         count++;
     }
@@ -36,19 +35,23 @@ public class Array {
     public void removeAt(int index){
 
         if (index < count && index >= 0){
-            for (int i = 0; i < count-index; i++) {
-                items[index] = items[index + 1];
-                index++;
+            for (int i = index; i < count; i++) {
+                items[i] = items[i+1];
             }
             count--;
-        }else if (index >= count){
-            System.out.println("fails");
+        }else if (index >= count || index < 0){
+            throw new IllegalArgumentException();
         }
     }
     //
-    public int indexOf(int n){
-
-        return 0;
+    public int indexOf(int item){
+        for (int i = 0; i < count; i++){
+            if (items[i] == item){
+                System.out.println("index is " + i + ".");
+                return i;
+            }
+        }
+        System.out.println("no this value.");
+        return -1;
     }
-
 }

@@ -9,7 +9,8 @@ public class Main {
         numbers.insert(20);
         numbers.insert(30);
         numbers.insert(40);
-        numbers.removeAt(4);
-        numbers.print();
+        numbers.removeAt(2);
+//        numbers.print();
+        numbers.indexOf(10);
     }
 }
