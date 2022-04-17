@@ -1,12 +1,14 @@
 package com.ry.jdatastruct.hashmap;
 
-import java.security.PublicKey;
 import java.util.*;
 
 public class CharFinder {
 
     /**
      * my way to find the first non repeating char
+     * 此方法可以用于找到第一次不重复的字符，
+     * 改后也可找到第一次重复的字符
+     * 不必更改数据结构
      * @param item
      * @return
      */
@@ -41,12 +43,6 @@ public class CharFinder {
         for (var ch : str.toCharArray()){
             var count = map.containsKey(ch) ? map.get(ch) : 0;
             map.put(ch, count + 1);
-//            if (map.containsKey(ch)){
-//                var count = map.get(ch);
-//                map.put(ch, count);
-//            }else {
-//                map.put(ch, 1);
-//            }
         }
         for (var ch : chars){
             if (map.get(ch) == 1){
