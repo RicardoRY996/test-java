@@ -179,19 +179,19 @@ public class Tree {
         getNodesAtDistance(root, distance, list);
         return list;
     }
+
     private void getNodesAtDistance(Node root, int distance, ArrayList<Integer> list) {
         if (root == null){
             return;
-        }
-
-        if (distance == 0){
+        }else if (distance == 0){
             list.add(root.value);
             return;
+        }else {
+            getNodesAtDistance(root.leftChild, distance - 1, list);
+            getNodesAtDistance(root.rightChild, distance - 1, list);
         }
-
-        getNodesAtDistance(root.leftChild, distance - 1, list);
-        getNodesAtDistance(root.rightChild, distance - 1, list);
     }
+
     public void swapRoot(){
         var temp = root.leftChild;
         root.leftChild = root.rightChild;
