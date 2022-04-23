@@ -25,6 +25,13 @@ public class Heap {
         return root;
     }
 
+    public int max(){
+        if (isEmpty()){
+            throw new IllegalStateException();
+        }
+        return items[0];
+    }
+
     public boolean isEmpty(){
         return size == 0;
     }
